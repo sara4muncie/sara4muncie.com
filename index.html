@@ -10,6 +10,8 @@
 	<meta name="description" content="Elect Democrat Sara Gullion for City Council District 4 in Muncie, Indiana in the November 2023 municipal election to support Accountability, Local Investment, Equity, and Transparency in local government.">
 	<link href="https://sara4muncie.com" rel="canonical">
 
+	<meta name="theme-color" content="#3D1F79">
+
 	<meta property="og:type" content="profile">
 	<meta property="og:title" content="Sara Gullion for Muncie City Council, District 4">
 	<meta property="og:url" content="https://sara4muncie.com">
@@ -74,7 +76,7 @@
 			opacity: .1;
 		}
 
-		@media (max-width:1000px){
+		@media (max-width: 1000px) {
 			body::after {
 				background: url(temp-background-mobile.jpg) 70% top no-repeat;
 				background-size: cover;
@@ -88,8 +90,8 @@
 			line-height: 1.1;
 		}
 
-		h1 span {
-			margin-top: 1em;
+		h1 .subhead {
+			margin-top: .25em;
 			display: block;
 			font-size: clamp(16px, 2vw, 72px);
 			font-family: 'Montserrat', sans-serif;
@@ -116,28 +118,40 @@
 			background: white;
 			color: var(--primary);
 		}
+
 		.coming-soon {
-			margin:3rem 0;
+			margin: 3rem 0;
 		}
+
 		.coming-soon h2 {
-			opacity:.6;
+			opacity: .6;
 		}
+
 		.headshot {
-			width:250px;
-			height:auto;
-			margin:3rem 0;
+			width: 250px;
+			height: auto;
+			margin: 3rem 0;
+		}
+
+		footer small {
+			font-style: italic;
+			text-align: center;
+			font-size: .7rem;
 		}
 	</style>
 </head>
 <body>
-<div>
-	<h1>Sara Gullion <span>for Muncie City Council, District 4</span></h1>
-	<img class="headshot" src="sara-gullion.jpg" alt="">
+<div itemscope itemtype="https://schema.org/Person">
+	<h1><span itemprop="name">Sara Gullion</span> <span class="subhead">for Muncie City Council, District 4</span></h1>
+	<img itemprop="image" class="headshot" src="sara-gullion.jpg" alt="Photo of Sara Gullion smiling">
 	<a class="button" href="https://secure.actblue.com/donate/committee-to-elect-sara-gullion-1" target="_blank">Help Spread the Word</a>
 	<div class="coming-soon">
 		<h2 class="coming-soon"><i>Website Coming Soon</i></h2>
 		<p>Visit <a href="https://www.facebook.com/Sara4MuncieCityCouncil" target="_blank"><b>Sara’s Facebook Page</b></a> for more details.</p>
 	</div>
+	<footer>
+		<small>Paid for by the Committee to Elect Sara Gullion</small>
+	</footer>
 </div>
 </body>
 </html>
