@@ -145,13 +145,67 @@
 		.headshot {
 			width: 250px;
 			height: auto;
-			margin: 3rem 0;
+			margin: 2rem 0;
 		}
 
 		footer small {
 			font-style: italic;
 			text-align: center;
 			font-size: .7rem;
+		}
+
+
+		/*One-Offs*/
+		@keyframes shake {
+			10%, 90% {transform: rotate(-.5deg);}
+			20%, 80% {transform: rotate(1deg);}
+			30%, 50%, 70% {transform: rotate(-2deg);}
+			40%, 60% {transform: rotate(2deg);}
+		}
+		.survey {
+			display: block;
+			width:max-content;
+			text-decoration: none;
+			background:white;
+			color:var(--primary);
+			text-align: center;
+			padding:2em 2em 1.6em;
+			border-radius:5em;
+			margin:0 auto 3em;
+			position: relative;
+		}
+		.survey:hover {
+			animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+			transform: translate3d(0, 0, 0);
+			backface-visibility: hidden;
+			perspective: 1000px;
+		}
+		.survey em {
+			color:var(--primary);
+			font-weight: 900;
+		}
+		.survey span {
+			display: block;
+			color:var(--primary);
+			font-weight: 900;
+			margin-top: .15em;
+			font-size: 1.5rem;
+			text-decoration: underline;
+		}
+		.survey:after {
+			content: '';
+			top: 93%;
+			left: 80%;
+			transform:rotate(30deg);
+			position: absolute;
+			border: 0 solid;
+			display: block;
+			width: 30px;
+			height: 16px;
+			background-color: transparent;
+			border-bottom-left-radius: 30%;
+			border-bottom-right-radius: 150%;
+			box-shadow: -21px 9px 0 8px white;
 		}
 	</style>
 
@@ -169,6 +223,10 @@
 <div itemscope itemtype="https://schema.org/Person">
 	<h1><span itemprop="name">Sara Gullion</span> <span class="subhead">for Muncie City Council, District 4</span></h1>
 	<img height="250" width="250" itemprop="image" class="headshot" src="sara-gullion.webp" alt="Photo of Sara Gullion smiling, ready to represent the citizens of District 4">
+	<a class="survey" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfxvLdrY2-QWSTfnzKEpQJjWubEs3RaPk8BrPJ1f5dVwPT1tA/viewform?ref=website">
+		Share what <em>YOU</em> expect for Muncie
+		<span>Take the Survey</span>
+	</a>
 	<a class="button" href="https://secure.actblue.com/donate/committee-to-elect-sara-gullion-1" target="_blank">Help Spread the Word</a>
 	<div class="coming-soon">
 		<p>Visit <a href="https://www.facebook.com/Sara4MuncieCityCouncil" rel="noopener" target="_blank"><b>Sara’s Facebook Page</b></a> for more details.</p>
